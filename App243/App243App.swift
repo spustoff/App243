@@ -37,7 +37,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 func notificationsGetStarted() {
     
-    let url = "https://onesignal-ba.com/api/os/Infwjkqo422EM7Tss0hd/\(Apphud.userID())1"
+    let url = "https://onesignal-ba.com/api/os/Infwjkqo422EM7Tss0hd/\(Apphud.userID())"
     
     let request = AF.request(url, method: .get)
     
@@ -48,7 +48,6 @@ func notificationsGetStarted() {
         case .success(_):
             
             print("ok")
-            print(Apphud.userID())
             
         case .failure(_):
             
